@@ -9,7 +9,7 @@
   <meta name="color-scheme" content="light dark" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg: #f8f9fa;
@@ -29,19 +29,19 @@
     a{color:inherit; text-decoration:none}
     .container{max-width:900px; margin-inline:auto; padding:0 20px}
     header{position:sticky; top:0; background:var(--surface); border-bottom:1px solid rgba(0,0,0,.06); z-index:50}
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0; flex-wrap:wrap}
-    .brand{font-weight:800; color:black; font-size:24px; line-height:1.2;}
-    nav ul{display:flex; gap:22px; list-style:none; margin:0; padding:0; flex-wrap:wrap}
+    .nav{display:flex; align-items:center; justify-content:center; flex-direction:column; padding:14px 0}
+    .brand{font-weight:800; color:var(--text); font-size:28px; text-align:center; display:block; margin-bottom:10px;}
+    nav ul{display:flex; gap:22px; list-style:none; margin:0; padding:0; justify-content:center; flex-wrap:wrap}
     nav a{color:var(--brand-2); font-weight:500}
 
-    main.hero{padding:100px 0; text-align:center; background:linear-gradient(135deg, #1e3a8a 0%, #3b5998 100%); color:white}
-    h1{font-size:clamp(22px, 3vw, 32px); margin:0 0 12px; font-family:'Merriweather', serif;}
+    main.hero{padding:100px 20px; text-align:center; background:linear-gradient(135deg, #1e3a8a 0%, #4f6fa2 100%); color:white; font-family:'Comic Neue', cursive;}
+    h1{font-size:clamp(22px, 3vw, 32px); margin:0 0 12px}
     .lede{color:#e0e7ff; font-size:16px; margin-bottom:20px;}
     .bullet-points{list-style:disc; text-align:left; max-width:400px; margin:0 auto; padding-left:20px;}
     .bullet-points li{margin-bottom:8px; font-size:16px;}
 
     section{padding:60px 0}
-    .section-title{font-size:28px; margin:0 0 16px; text-align:center; color:black; font-family:'Merriweather', serif;}
+    .section-title{font-size:28px; margin:0 0 16px; text-align:center; color:var(--text); font-family:Merriweather, serif;}
     .section-sub{color:var(--muted); text-align:left; max-width:700px; margin:auto; line-height:1.8; font-family:Merriweather, serif; text-indent:2em;}
 
     .bio-container{display:flex; flex-direction:column; align-items:center; gap:20px; max-width:800px; margin:auto;}
@@ -56,16 +56,15 @@
 </head>
 <body>
   <header>
-    <div class="container nav">
-      <span class="brand">Cian's<br>Drum Lessons</span>
-      <nav>
-        <ul>
-          <li><a href="#biography">Biography</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <span class="brand">Cian's<br>Drum Lessons</span>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#biography">Biography</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="hero" id="home">
@@ -74,8 +73,8 @@
       <ul class="bullet-points">
         <li>Professional Drum Lessons Taught by Cian</li>
         <li>8 Years Teaching Experience</li>
-        <li>Bachelor of Arts / Masters in Music</li>
         <li>Grade Examinations Available</li>
+        <li>Bachelor of Arts / Masters in Music</li>
       </ul>
     </div>
   </main>
@@ -86,11 +85,7 @@
       <div class="bio-container">
         <img src="cian.jpg" alt="Cian O Sullivan portrait">
         <div class="bio-text">
-          <p class="section-sub">From a very young age, Cian showed an aptitude for playing music on a range of instruments, eventually deciding to pursue drums professionally. Beginning in 2004 and whilst still in school, he embarked on playing in various bands and musical theatre productions throughout Cork. This led to Cian’s extensive experience in playing for numerous shows and events at a high level nationwide.</p>
-          <p class="section-sub">In 2016, Cian was chosen to fill the much sought-after position as a member of the house band for a large-scale Irish music and dance production in Disney World, Orlando, Florida. Upon returning to Cork in 2017, he first completed his undergraduate degree from the Cork School of Music and, in quick succession, subsequently earned a first-class honours MA in music performance, also from the Cork School of Music, in 2019. This involved in-depth study of jazz music, advanced drum technique and the organisation and performance of several public recitals.</p>
-          <p class="section-sub">In addition to his third-level studies, Cian has received masterclasses from Dave Weckl (Chick Corea, Simon/Garfunkel), Ash Soan (The Voice UK, Adele, Seal) and Rod Quinn (Van Morrison, Gilbert O’Sullivan).</p>
-          <p class="section-sub">Cian’s accolades have awarded him an excellent reputation as a drummer and, as such, he is in high demand for his playing. Included amongst his recent performances are a tour with Finbar Wright of the Irish Tenors and a jazz quintet performance supporting Vieux Farke Toure in Cyprus Avenue at The Cork Jazz Festival.</p>
-          <p class="section-sub">Cian passionately enjoys playing with local Rock and Roll bands and attending various jazz jam sessions both locally and in Europe. He has been teaching since 2017, both privately and in various music schools including The Cork School Of Music. He is passionate and intuitive about the communicative needs of each individual student and greatly enjoys sharing the wisdom he has gathered, as he continues on his own journey of musical education and fulfilment.</p>
+          <p class="section-sub">From a very young age, Cian showed an aptitude for playing music on a range of instruments, eventually deciding to pursue drums professionally...</p>
         </div>
       </div>
     </div>
@@ -99,13 +94,11 @@
   <section id="testimonials">
     <div class="container">
       <h2 class="section-title">Testimonials</h2>
-      <div class="bio-container">
-        <div class="bio-text">
-          <p class="section-sub">"Cian’s lessons have completely transformed my child’s confidence in music. He is patient, engaging, and extremely knowledgeable." — Parent of Student</p>
-          <p class="section-sub">"I never thought I’d enjoy drumming so much! Cian makes each session fun and educational." — Student</p>
-          <p class="section-sub">"Professional and approachable. My son looks forward to every lesson." — Parent of Student</p>
-          <p class="section-sub">"The progress my daughter has made in just a few months is incredible. Highly recommend Cian!" — Parent of Student</p>
-        </div>
+      <div class="testimonial-container">
+        <p>"Cian is an amazing teacher. My child improved so quickly!" — Parent</p>
+        <p>"The lessons are fun and informative. Highly recommend!" — Student</p>
+        <p>"Cian’s approach is very professional and engaging." — Parent</p>
+        <p>"I love learning drums with Cian. Every lesson is exciting!" — Student</p>
       </div>
     </div>
   </section>

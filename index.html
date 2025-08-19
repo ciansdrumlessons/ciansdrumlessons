@@ -9,15 +9,15 @@
   <meta name="color-scheme" content="light dark" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg: #f8f9fa;
       --surface: #ffffff;
       --text: #1f2937;
       --muted: #4b5563;
-      --brand: #1e3a8a; /* deep blue */
-      --brand-2: #64748b; /* slate gray */
+      --brand: #1e3a8a;
+      --brand-2: #64748b;
       --ring: rgba(30,58,138,.35);
       --card: #f1f5f9;
     }
@@ -29,19 +29,19 @@
     a{color:inherit; text-decoration:none}
     .container{max-width:900px; margin-inline:auto; padding:0 20px}
     header{position:sticky; top:0; background:var(--surface); border-bottom:1px solid rgba(0,0,0,.06); z-index:50}
-    .nav{display:flex; align-items:center; justify-content:center; flex-direction:column; padding:14px 0}
-    .brand{font-weight:800; color:var(--text); font-size:28px; text-align:center; display:block; margin-bottom:10px;}
-    nav ul{display:flex; gap:22px; list-style:none; margin:0; padding:0; justify-content:center; flex-wrap:wrap}
-    nav a{color:var(--brand-2); font-weight:500}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{font-family:Merriweather, serif; font-weight:800; color:var(--brand); font-size:24px; margin-left:10px}
+    nav ul{display:flex; gap:22px; list-style:none; margin:0; padding:0}
+    nav a{color:var(--brand-2); font-weight:500; text-align:center}
 
-    main.hero{padding:100px 20px; text-align:center; background:linear-gradient(135deg, #1e3a8a 0%, #4f6fa2 100%); color:white; font-family:'Comic Neue', cursive;}
+    main.hero{padding:100px 0; text-align:center; background:linear-gradient(135deg, #1e3a8a 0%, #6b7c99 100%); color:white; font-family:Poppins, system-ui, sans-serif}
     h1{font-size:clamp(22px, 3vw, 32px); margin:0 0 12px}
     .lede{color:#e0e7ff; font-size:16px; margin-bottom:20px;}
     .bullet-points{list-style:disc; text-align:left; max-width:400px; margin:0 auto; padding-left:20px;}
     .bullet-points li{margin-bottom:8px; font-size:16px;}
 
     section{padding:60px 0}
-    .section-title{font-size:28px; margin:0 0 16px; text-align:center; color:var(--text); font-family:Merriweather, serif;}
+    .section-title{font-size:28px; margin:0 0 16px; text-align:center; color:var(--brand); font-family:Merriweather, serif;}
     .section-sub{color:var(--muted); text-align:left; max-width:700px; margin:auto; line-height:1.8; font-family:Merriweather, serif; text-indent:2em;}
 
     .bio-container{display:flex; flex-direction:column; align-items:center; gap:20px; max-width:800px; margin:auto;}
@@ -56,15 +56,17 @@
 </head>
 <body>
   <header>
-    <span class="brand">Cian's<br>Drum Lessons</span>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#biography">Biography</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container nav">
+      <span class="brand">Cian's<br>Drum Lessons</span>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#biography">Biography</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="hero" id="home">
@@ -73,8 +75,8 @@
       <ul class="bullet-points">
         <li>Professional Drum Lessons Taught by Cian</li>
         <li>8 Years Teaching Experience</li>
-        <li>Grade Examinations Available</li>
         <li>Bachelor of Arts / Masters in Music</li>
+        <li>Grade Examinations Available</li>
       </ul>
     </div>
   </main>
@@ -85,7 +87,8 @@
       <div class="bio-container">
         <img src="cian.jpg" alt="Cian O Sullivan portrait">
         <div class="bio-text">
-          <p class="section-sub">From a very young age, Cian showed an aptitude for playing music on a range of instruments, eventually deciding to pursue drums professionally...</p>
+          <p class="section-sub">From a very young age, Cian showed an aptitude for playing music...</p>
+          <p class="section-sub">In 2016, Cian was chosen to fill the much sought-after position...</p>
         </div>
       </div>
     </div>
@@ -94,11 +97,11 @@
   <section id="testimonials">
     <div class="container">
       <h2 class="section-title">Testimonials</h2>
-      <div class="testimonial-container">
-        <p>"Cian is an amazing teacher. My child improved so quickly!" — Parent</p>
-        <p>"The lessons are fun and informative. Highly recommend!" — Student</p>
-        <p>"Cian’s approach is very professional and engaging." — Parent</p>
-        <p>"I love learning drums with Cian. Every lesson is exciting!" — Student</p>
+      <div class="testimonial-slider" style="text-align:center; max-width:700px; margin:auto;">
+        <div class="testimonial">"Cian is an amazing teacher! My son improved so quickly. Highly recommend!" – Sarah W.</div>
+        <div class="testimonial">"Fantastic lessons, very professional and patient. Great experience!" – John M.</div>
+        <div class="testimonial">"My daughter loves her drum lessons with Cian. He's inspiring and fun!" – Emily T.</div>
+        <div class="testimonial">"Excellent teaching and great communication. Truly helps students grow." – Liam R.</div>
       </div>
     </div>
   </section>

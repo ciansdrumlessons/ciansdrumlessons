@@ -28,24 +28,34 @@
     }
     a{color:inherit; text-decoration:none}
     .container{max-width:900px; margin-inline:auto; padding:0 20px}
-    header{background:var(--surface); border-bottom:1px solid rgba(0,0,0,.06); z-index:50; text-align:center; padding:14px 0}
-    .brand{font-weight:800; color:black; font-size:24px; display:block; margin-bottom:10px;}
-    nav ul{display:flex; flex-wrap:wrap; justify-content:center; gap:22px; list-style:none; margin:0; padding:0}
+    header{position:sticky; top:0; background:var(--surface); border-bottom:1px solid rgba(0,0,0,.06); z-index:50; padding:12px 0}
+    .brand{font-weight:800; color:#000; font-size:24px; display:block; text-align:left; margin-bottom:6px}
+    nav ul{display:flex; justify-content:center; gap:18px; list-style:none; margin:0; padding:0}
     nav a{color:var(--brand-2); font-weight:500}
 
-    main.hero{padding:100px 0; text-align:center; background:linear-gradient(135deg, #2a3f92 0%, #64748b 100%); color:white; font-family:Cambria, serif;}
+    main.hero{
+      padding:100px 0;
+      text-align:center;
+      background:linear-gradient(135deg, #1e3a8a 0%, #3f4e9e 100%);
+      color:white;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
     h1{font-size:clamp(22px, 3vw, 32px); margin:0 0 12px}
-    .lede{color:#e0e7ff; font-size:16px; margin-bottom:20px;}
     .bullet-points{list-style:disc; text-align:left; max-width:400px; margin:0 auto; padding-left:20px;}
     .bullet-points li{margin-bottom:8px; font-size:16px;}
 
     section{padding:60px 0}
-    .section-title{font-size:28px; margin:0 0 16px; text-align:center; color:black}
+    .section-title{font-size:28px; margin:0 0 16px; text-align:center; color:#000}
     .section-sub{color:var(--muted); text-align:left; max-width:700px; margin:auto; line-height:1.8; font-family:Merriweather, serif; text-indent:2em;}
 
     .bio-container{display:flex; flex-direction:column; align-items:center; gap:20px; max-width:800px; margin:auto;}
     .bio-container img{max-width:250px; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.15)}
     .bio-text{flex:1}
+
+    .testimonial-slider{position:relative; max-width:700px; margin:0 auto; overflow:hidden}
+    .testimonial-track{display:flex; transition:transform 0.5s ease}
+    .testimonial{min-width:100%; padding:20px; box-sizing:border-box; background:var(--card); border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.1); margin:10px}
+    .testimonial p{font-family:Merriweather, serif; font-size:16px; line-height:1.6}
 
     .contact-details{list-style:none; padding:0; margin:20px auto; max-width:400px; text-align:center;}
     .contact-details li{margin:8px 0; font-size:18px;}
@@ -72,7 +82,7 @@
     <div class="container">
       <h1>Learn drums with personalized instruction</h1>
       <ul class="bullet-points">
-        <li>Professional Drum Lessons Taught by Cian Sullivan</li>
+        <li>Professional Drum Lessons Taught by Cian</li>
         <li>8 Years Teaching Experience</li>
         <li>Bachelor of Arts / Masters in Music</li>
         <li>Grade Examinations Available</li>
@@ -86,7 +96,11 @@
       <div class="bio-container">
         <img src="cian.jpg" alt="Cian O Sullivan portrait">
         <div class="bio-text">
-          <p class="section-sub">From a very young age, Cian showed an aptitude for playing music...</p>
+          <p class="section-sub">From a very young age, Cian showed an aptitude for playing music on a range of instruments...</p>
+          <p class="section-sub">In 2016, Cian was chosen to fill the much sought-after position as a member of the house band...</p>
+          <p class="section-sub">In addition to his third-level studies, Cian has received masterclasses from Dave Weckl...</p>
+          <p class="section-sub">Cian’s accolades have awarded him an excellent reputation as a drummer...</p>
+          <p class="section-sub">Cian passionately enjoys playing with local Rock and Roll bands and attending various jazz jam sessions...</p>
         </div>
       </div>
     </div>
@@ -95,11 +109,13 @@
   <section id="testimonials">
     <div class="container">
       <h2 class="section-title">Testimonials</h2>
-      <div class="testimonial-carousel">
-        <blockquote>“Cian has been an amazing teacher for my son. His patience and enthusiasm made lessons enjoyable.” — Parent</blockquote>
-        <blockquote>“I’ve improved so much since starting lessons with Cian. He makes complex rhythms easy to understand.” — Student</blockquote>
-        <blockquote>“Cian’s passion for music is contagious. My daughter looks forward to every class.” — Parent</blockquote>
-        <blockquote>“Professional, skilled, and approachable. I would highly recommend Cian to anyone wanting to learn drums.” — Student</blockquote>
+      <div class="testimonial-slider">
+        <div class="testimonial-track">
+          <div class="testimonial"><p>“Cian’s lessons are amazing. My child has improved so much in just a few months and absolutely loves coming each week.”</p></div>
+          <div class="testimonial"><p>“I was a complete beginner, but Cian made learning the drums fun and approachable. Highly recommend his teaching.”</p></div>
+          <div class="testimonial"><p>“Cian is patient and knowledgeable. He tailors lessons to each student and makes sure we stay motivated.”</p></div>
+          <div class="testimonial"><p>“Fantastic teacher with real passion for music. My confidence on the drums has grown hugely since starting lessons with him.”</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -123,6 +139,25 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple testimonial slider
+    const track = document.querySelector('.testimonial-track');
+    let index = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    function showSlide(i){
+      index = (i + testimonials.length) % testimonials.length;
+      track.style.transform = `translateX(${-index * 100}%)`;
+    }
+    setInterval(()=>showSlide(index+1), 5000);
+
+    // Touch support for mobile swipe
+    let startX = 0;
+    track.addEventListener('touchstart', e=> startX = e.touches[0].clientX);
+    track.addEventListener('touchend', e=>{
+      let endX = e.changedTouches[0].clientX;
+      if(endX < startX - 50) showSlide(index+1);
+      if(endX > startX + 50) showSlide(index-1);
+    });
   </script>
 </body>
 </html>

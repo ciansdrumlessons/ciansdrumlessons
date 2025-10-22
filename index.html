@@ -1,438 +1,150 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Updated Title for SEO -->
-  <title>Douglas Drum Lessons | Drum Lessons in Cork City | Cian's Drum Lessons</title>
-  <!-- Updated Meta Description for SEO -->
-  <meta name="description" content="Looking for drum lessons in Cork? Cian offers professional beginner to intermediate lessons in Douglas, Cork. Personalized instruction and grade examinations available." />
-  <meta name="theme-color" content="#1e3a8a" />
-  <meta name="color-scheme" content="light dark" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional drum lessons in Douglas, Cork, taught by Cian O’Sullivan (MA Music Performance). Beginner to advanced students welcome." />
+  <meta property="og:title" content="Cian’s Drum Lessons — Professional Drum Lessons in Cork" />
+  <meta property="og:description" content="Learn drums in Cork: beginner to intermediate, grade exams, taught by MA‑qualified drummer Cian O’Sullivan." />
+  <meta property="og:image" content="https://www.ciansdrumlessons.com/assets/cian-portrait.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Drum Lessons in Cork | Cian O’Sullivan</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicSchool",
+    "name": "Cian's Drum Lessons",
+    "description": "Professional drum lessons in Douglas, Cork, taught by MA in Music Performance graduate.",
+    "image": "https://www.ciansdrumlessons.com/assets/cian-portrait.jpg",
+    "email": "mailto:cianos@gmail.com",
+    "telephone": "+353879228198",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Douglas",
+      "addressRegion": "Cork",
+      "addressCountry": "Ireland"
+    },
+    "url": "https://www.ciansdrumlessons.com"
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <style>
-    :root{
-      --bg: #f8f9fa;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #4b5563;
-      --brand: #1e3a8a; /* deep blue */
-      --brand-2: #64748b; /* slate gray */
-      --ring: rgba(30,58,138,.35);
-      --card: #f1f5f9;
-    }
-    body{
-      margin:0; font-family:Inter, system-ui, sans-serif;
-      background: var(--bg);
-      color:var(--text);
-      line-height:1.5;
-    }
-    html.dark{
-      --bg: #111827;
-      --surface: #1f2937;
-      --text: #f9fafb;
-      --muted: #d1d5db;
-      --brand: #3b82f6; /* blue 500 */
-      --brand-2: #94a3b8; /* slate 400 */
-      --ring: rgba(59,130,246,.5);
-      --card: #1f2937;
-    }
-    a{color:inherit; text-decoration:none}
-    .container{max-width:900px; margin-inline:auto; padding:0 20px}
-
-    /* Updated header styles */
-    header {
-      position: sticky;
-      top: 0;
-      background: var(--surface);
-      border-bottom: 1px solid rgba(0, 0, 0, .06);
-      z-index: 50;
-      padding: 14px 20px;
-    }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .brand {
-      font-weight: 800;
-      color: var(--text);
-      font-size: 24px;
-      line-height: 1.2;
-    }
-    nav ul {
-      display: flex;
-      gap: 22px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav a {
-      color: var(--brand-2);
-      font-weight: 500;
-    }
-    
-    main.hero{
-      padding:100px 0; text-align:center;
-      background: linear-gradient(135deg, #001f3f 0%, #0074e4 100%);
-      color:white;
-    }
-
-    /* New styles for the hero content layout */
-    .hero-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        max-width: 900px;
-        margin-inline: auto;
-    }
-    @media (min-width: 768px) {
-      .hero-content-wrapper {
-        flex-direction: row;
-      }
-    }
-
-    /* Updated h1 font size and alignment */
-    .hero .hero-content h1 {
-      font-size:clamp(24px, 3.5vw, 36px); margin:0 0 12px;
-      font-family:'Poppins', sans-serif;
-    }
-    /* New styles for the features grid */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .feature-card {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      padding: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    .feature-card svg {
-      color: #fff;
-      min-width: 24px;
-      min-height: 24px;
-    }
-    .feature-card p {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      font-size: 16px;
-    }
-    /* New image styles for the hero section */
-    .hero-image-container {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .hero-image {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    }
-
-
-    section{padding:60px 0}
-    .section-title{font-size:28px; margin:0 0 16px; text-align:center; color:black; font-family:'Merriweather', serif;}
-    .section-sub{
-      color:var(--muted); text-align:left; max-width:700px; margin:auto; line-height:1.8;
-      font-family:Merriweather, serif;
-    }
-    .bio-text p.section-sub {
-        text-indent: 2em; /* Apply indent only to bio section paragraphs */
-    }
-
-    .bio-container{display:flex; flex-direction:column; align-items:center; gap:20px; max-width:800px; margin:auto;}
-    .bio-container img{max-width:250px; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.15)}
-    .bio-text{flex:1}
-
-    /* Reverted Contact Section Styles with reduced spacing */
-    .contact-details {
-      list-style-type: none;
-      padding: 0;
-      max-width: 500px;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px; /* Reduced space between items */
-    }
-    .contact-details li {
-      font-weight: 500;
-      font-size: 16px;
-    }
-    .contact-details a {
-      color: var(--brand);
-      text-decoration: underline;
-    }
-
-    /* Testimonial Carousel Styles */
-    .testimonial-carousel {
-      position: relative;
-      max-width: 800px;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4-5px 8px rgba(0,0,0,0.1);
-      background-color: var(--card);
-    }
-    .testimonials-wrapper {
-      display: flex;
-      width: 100%;
-      transition: transform 0.5s ease-in-out;
-    }
-    .testimonial-item {
-      /* The key fix: This ensures each item takes up exactly 100% of the parent's width */
-      flex: 0 0 100%;
-      box-sizing: border-box;
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-      padding: 40px; /* Moved padding to individual items */
-    }
-    .testimonial-text {
-      font-style: italic;
-      line-height: 1.6;
-      word-wrap: break-word;
-    }
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
-    }
-    #prevBtn { left: 10px; }
-    #nextBtn { right: 10px; }
-
-    footer{padding:30px 0; color:var(--muted); border-top:1px solid rgba(0,0,0,.06); text-align:center}
+    html { scroll-behavior: smooth; }
+    .testimonial-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    .dark-mode { background-color: #0f172a; color: #e2e8f0; }
   </style>
 </head>
-<body>
-  <header>
-    <div class="container nav">
-      <span class="brand">Cian's<br>Drum Lessons</span>
-      <nav>
-        <ul>
-          <li><a href="#biography">Biography</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main class="hero" id="home">
-    <div class="container hero-content-wrapper">
-      <div class="hero-content">
-        <h1>Beginner to intermediate drum lessons</h1>
-        <div class="features-grid">
-          <div class="feature-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-drum-stick">
-              <path d="M19 12h-3"/>
-              <path d="M12 10.5V6a2.5 2.5 0 0 1 5 0v4.5"/>
-              <path d="M22 6c0 1.67-1.34 3-3 3s-3-1.33-3-3 1.34-3 3-3 3 1.33 3 3Z"/>
-              <path d="M10 13.5V18a2.5 2.5 0 0 0 5 0v-4.5"/>
-              <path d="M2 18c0 1.67 1.34 3 3 3s3-1.33 3-3-1.34-3-3-3-3 1.33-3 3Z"/>
-            </svg>
-            <p>Professional Drum Lessons Taught by Cian</p>
-          </div>
-          <div class="feature-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check">
-              <path d="M21 14V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/>
-              <line x1="16" x2="16" y1="2" y2="6"/>
-              <line x1="8" x2="8" y1="2" y2="6"/>
-              <line x1="3" x2="21" y1="10" y2="10"/>
-              <path d="m16 20 2 2 4-4"/>
-            </svg>
-            <p>8 Years Teaching Experience</p>
-          </div>
-          <div class="feature-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c3 3 7 3 10 0v-5"/>
-            </svg>
-            <p>Bachelor of Arts / Masters in Music</p>
-          </div>
-          <div class="feature-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award">
-              <path d="m15.477 12.89 1.515 2.41a1 1 0 0 1-.845 1.406l-3.785.655a2 2 0 0 0-1.268.94l-.178.347a1 1 0 0 1-1.406.845l-2.41-1.515a2 2 0 0 0-.94-1.268l-.347-.178a1 1 0 0 1-.845-1.406l1.515-2.41a2 2 0 0 0 1.268-.94l.178-.347a1 1 0 0 1 1.406-.845l2.41 1.515a2 2 0 0 0 .94 1.268l.347.178a1 1 0 0 1 1.406.845Z"/>
-              <path d="m14.288 2.5 1.34 2.138a1.2 1.2 0 0 0 1.954.218l2.978-2.979A.5.5 0 0 1 21 2.5v11.72a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2.5a.5.5 0 0 1 .82-1.393l2.978 2.979a1.2 1.2 0 0 0 1.954-.218l1.34-2.138a.5.5 0 0 1 .844 0Z"/>
-            </svg>
-            <p>Grade Examinations Available</p>
-          </div>
-          <div class="feature-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-text">
-              <path d="M2 6h4"/>
-              <path d="M2 10h4"/>
-              <path d="M2 14h4"/>
-              <path d="M2 18h4"/>
-              <rect width="16" height="20" x="4" y="2" rx="2"/>
-              <path d="M9.5 8h5"/>
-              <path d="M9.5 12h5"/>
-              <path d="M9.5 16h5"/>
-            </svg>
-            <p>Learn to read music</p>
-          </div>
-          <div class="feature-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucude-ear">
-              <path d="M6 10a7 7 0 0 1 14 0v4a7 7 0 0 1-14 0v-4"/>
-              <path d="M10 10a3 3 0 1 1 6 0"/>
-              <path d="M10 12v3a2 2 0 1 1-4 0v-3"/>
-            </svg>
-            <p>Learn to play by ear</p>
-          </div>
-        </div>
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-inter">
+
+<header class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-sm">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-5">
+    <h1 class="text-lg font-semibold">Cian’s Drum Lessons</h1>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="#testimonials" class="hover:text-amber-500">Testimonials</a>
+      <a href="#lessons" class="hover:text-amber-500">Lessons</a>
+      <a href="#contact" class="hover:text-amber-500">Contact</a>
+      <a href="#biography" class="hover:text-amber-500">Biography</a>
+    </nav>
+    <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-700">
+      🌙
+    </button>
+  </div>
+</header>
+
+<section class="h-screen flex flex-col justify-center items-center text-center bg-[url('https://www.ciansdrumlessons.com/assets/hero-bg.webp')] bg-cover bg-center" id="home">
+  <div class="bg-black/60 p-6 rounded-xl text-white max-w-xl mx-auto">
+    <h2 class="text-4xl font-bold mb-4">Learn Drums in Cork</h2>
+    <p class="text-lg mb-6">Professional drum lessons for beginners to advanced students, tailored to each learner.</p>
+    <a href="#contact" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg shadow-lg transition">Book Your First Lesson</a>
+  </div>
+</section>
+
+<section id="testimonials" class="py-16 bg-slate-50 dark:bg-slate-800">
+  <div class="max-w-6xl mx-auto px-5 text-center">
+    <h2 class="text-3xl font-semibold mb-10">What Parents & Students Say</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up">
+        <p>“Cian is a fantastic teacher. My son loves going to his drum lessons and is progressing really well.”</p>
+        <p class="mt-3 font-semibold text-amber-600">— Lyndsey</p>
       </div>
-      <div class="hero-image-container">
-        <img class="hero-image" src="https://placehold.co/400x400/1e3a8a/ffffff?text=Add+your+photo+here" alt="Cian teaching a student drum lessons">
+      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+        <p>“Cian has been teaching my daughter for a year and she’s absolutely loving it. Highly recommended.”</p>
+        <p class="mt-3 font-semibold text-amber-600">— Emma</p>
+      </div>
+      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+        <p>“Cian has been teaching my son drummers for the last year and a half. He’s an excellent teacher.”</p>
+        <p class="mt-3 font-semibold text-amber-600">— Niamh</p>
+      </div>
+      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up">
+        <p>“Outstanding teacher and really nice guy. Our son has learned so much and enjoys every lesson.”</p>
+        <p class="mt-3 font-semibold text-amber-600">— Vaughn</p>
+      </div>
+      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+        <p>“Cian has been teaching our daughter drumming for the majority of primary school. She’s made great progress.”</p>
+        <p class="mt-3 font-semibold text-amber-600">— Jenny</p>
+      </div>
+      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+        <p>“Cian has been teaching our son drums for the last 18 months and we couldn’t be happier.”</p>
+        <p class="mt-3 font-semibold text-amber-600">— Eithne</p>
       </div>
     </div>
-  </main>
+  </div>
+</section>
 
-  <section id="biography">
-    <div class="container">
-      <h2 class="section-title">Biography</h2>
-      <div class="bio-container">
-        <img src="cian.jpg" alt="Cian O Sullivan portrait">
-        <div class="bio-text">
-          <p class="section-sub">In 2016, Cian was chosen to fill the much sought-after position as a member of the house band for a large-scale Irish music and dance production in Disney World, Orlando, Florida. Upon returning to Cork in 2017, he first completed his undergraduate degree from the Cork School of Music and, in quick succession, subsequently earned a first-class honours MA in music performance, also from the Cork School of Music, in 2019. This involved in-depth study of jazz music, advanced drum technique and the organisation and performance of several public recitals.</p>
-          <p class="section-sub">In addition to his third-level studies, Cian has received masterclasses from Dave Weckl (Chick Corea, Simon/Garfunkel), Ash Soan (The Voice UK, Adele, Seal) and Rod Quinn (Van Morrison, Gilbert O’Sullivan).</p>
-          <p class="section-sub">Cian’s accolades have awarded him an excellent reputation as a drummer and, as such, he is in high demand for his playing. Included amongst his recent performances are a tour with Finbar Wright of the Irish Tenors and a jazz quintet performance supporting Vieux Farke Toure in Cyprus Avenue at The Cork Jazz Festival.</p>
-          <p class="section-sub">Cian passionately enjoys playing with local Rock and Roll bands and attending various jazz jam sessions both locally and in Europe. He has been teaching since 2017, both privately and in various music schools including The Cork School Of Music. He is passionate and intuitive about the communicative needs of each individual student and greatly enjoys sharing the wisdom he has gathered, as he continues on his own journey of musical education and fulfilment.</p>
-        </div>
+<section id="lessons" class="py-20">
+  <div class="max-w-5xl mx-auto px-5 text-center">
+    <h2 class="text-3xl font-semibold mb-8">About the Lessons</h2>
+    <p class="mb-6 text-lg">Cian O’Sullivan provides one-to-one drum tuition for students of all ages and experience levels. Lessons focus on developing confidence, rhythm, and creativity while keeping sessions engaging and fun.</p>
+    <p class="mb-6 text-lg">Students can learn by ear, through songs they enjoy, or work toward graded exams (RIAM, Trinity, Rockschool). Each session is tailored to the student’s goals and musical interests.</p>
+    <a href="#biography" class="inline-block mt-4 px-5 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Read Full Biography ↓</a>
+  </div>
+</section>
+
+<section id="contact" class="py-20 bg-slate-50 dark:bg-slate-800">
+  <div class="max-w-4xl mx-auto px-5 text-center">
+    <h2 class="text-3xl font-semibold mb-8">Get in Touch</h2>
+    <p>Email: <a href="mailto:cianos@gmail.com" class="text-amber-600 hover:underline">cianos@gmail.com</a></p>
+    <p>Phone: <a href="tel:+353879228198" class="text-amber-600 hover:underline">+353 87 922 8198</a></p>
+    <p class="mt-4 text-sm text-slate-500">By contacting, you consent to your message being used solely to arrange lessons.</p>
+  </div>
+</section>
+
+<section id="biography" class="py-20">
+  <div class="max-w-5xl mx-auto px-5">
+    <h2 class="text-3xl font-semibold text-center mb-10">Full Biography</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <img src="https://www.ciansdrumlessons.com/assets/cian-portrait.jpg" alt="Cian O’Sullivan" class="rounded-2xl w-64 h-auto shadow-lg" loading="lazy" />
+      <div class="text-lg leading-relaxed">
+        <p>Cian O’Sullivan is a professional drummer and educator based in Douglas, Cork. He holds an MA in Music Performance and has over a decade of experience performing and teaching drums.</p>
+        <p>His performance highlights include working as a professional musician at Walt Disney World in Florida, as well as touring and recording with several Irish and international acts.</p>
+        <p>Cian has studied under renowned drummers such as Dave Elitch (Mars Volta), Mark Guiliana (David Bowie), and Ralph Peterson Jr. (Art Blakey). He brings this experience to his lessons, providing students with a modern, versatile, and inspiring approach to drumming.</p>
+        <p>Lessons are suitable for all ages and levels — from beginners taking their first steps, to experienced drummers preparing for professional or academic paths.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="testimonials">
-    <div class="container">
-      <h2 class="section-title">Testimonials</h2>
-      <div class="testimonial-carousel">
-        <div class="testimonials-wrapper" id="testimonials-wrapper">
-          <div class="testimonial-item">
-            <p class="testimonial-text">"Cian is a fantastic teacher! My son loves going to his drum lessons - it’s the highlight of the week 🥁"</p>
-          </div>
-          <div class="testimonial-item">
-            <p class="testimonial-text">"Cian has been teaching my daughter the drums for the last year and a half. She is thriving and learning quickly. His lessons are fun and she looks forward to each lesson. This is due to the kind,patient way Cian encourages her."</p>
-          </div>
-          <div class="testimonial-item">
-            <p class="testimonial-text">"Cian has been teaching my son drums for the last year and a half.Cian's lessons are individually tailored with the student being at the centre of each lesson. Barra can't wait for his lesson every week. I would recommend Cian for anyone wanting to learn the drums."</p>
-          </div>
-          <div class="testimonial-item">
-            <p class="testimonial-text">"Outstanding teacher and really nice guy."</p>
-          </div>
-        </div>
-        <!-- Navigation Buttons -->
-        <button id="prevBtn" class="carousel-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button id="nextBtn" class="carousel-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
+<footer class="py-10 text-center bg-slate-900 text-slate-300">
+  <p>&copy; 2025 Cian’s Drum Lessons. All rights reserved.</p>
+  <a href="#home" class="block mt-3 text-amber-500 hover:underline">Back to top ↑</a>
+</footer>
 
-  <section id="contact" class="bg-slate-50 dark:bg-slate-900">
-    <div class="container">
-      <h2 class="section-title text-slate-800 dark:text-white">Contact</h2>
-      <p class="text-center mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-        Serving the greater Cork City area, including Douglas, Ballinlough, Grange, Rochestown, Carrigaline, and Crosshaven.
-      </p>
-      <div class="flex flex-col md:flex-row gap-6 max-w-2xl mx-auto mt-8">
-        <!-- Contact Card for Email -->
-        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg w-full">
-          <h3 class="font-bold text-lg mb-2 text-slate-800 dark:text-slate-200">Email</h3>
-          <a href="mailto:cianos@gmail.com?subject=Lesson%20Inquiry" class="mt-4 inline-block font-semibold text-blue-600 dark:text-blue-400 no-underline hover:text-blue-700 dark:hover:text-blue-300">
-            cianos@gmail.com
-          </a>
-        </div>
+<script>
+AOS.init();
+const toggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') document.documentElement.classList.add('dark');
+toggle.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+  localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+});
+</script>
 
-        <!-- Contact Card for Phone -->
-        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg w-full">
-          <h3 class="font-bold text-lg mb-2 text-slate-800 dark:text-slate-200">Phone</h3>
-          <a href="tel:+353879228198" class="mt-4 inline-block font-semibold text-blue-600 dark:text-blue-400 no-underline hover:text-blue-700 dark:hover:text-blue-300">
-            +353 87 922 8198
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <small>© <span id="year"></span> Cian's Drum Lessons. All rights reserved.</small>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Testimonial Carousel Logic
-    const testimonialsWrapper = document.getElementById('testimonials-wrapper');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const totalTestimonials = testimonialsWrapper.children.length;
-    let currentIndex = 0;
-    let startX = 0;
-    let endX = 0;
-
-    // Function to update the carousel position
-    function updateCarousel() {
-      const offset = -currentIndex * 100;
-      testimonialsWrapper.style.transform = `translateX(${offset}%)`;
-    }
-
-    // Function to handle next button click
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % totalTestimonials;
-      updateCarousel();
-    });
-
-    // Function to handle previous button click
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
-      updateCarousel();
-    });
-
-    // Touch event listeners for swiping on mobile
-    testimonialsWrapper.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-    });
-
-    testimonialsWrapper.addEventListener('touchmove', (e) => {
-      endX = e.touches[0].clientX;
-    });
-
-    testimonialsWrapper.addEventListener('touchend', () => {
-      const deltaX = startX - endX;
-      if (deltaX > 50) {
-        // Swipe left (next)
-        currentIndex = (currentIndex + 1) % totalTestimonials;
-      } else if (deltaX < -50) {
-        // Swipe right (previous)
-        currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
-      }
-      updateCarousel();
-    });
-  </script>
 </body>
 </html>

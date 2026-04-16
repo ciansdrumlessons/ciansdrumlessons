@@ -4,146 +4,152 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Professional drum lessons in Douglas, Cork, taught by Cian O’Sullivan (MA Music Performance). Beginner to advanced students welcome." />
-  <meta property="og:title" content="Cian’s Drum Lessons — Professional Drum Lessons in Cork" />
-  <meta property="og:description" content="Learn drums in Cork: beginner to intermediate, grade exams, taught by MA‑qualified drummer Cian O’Sullivan." />
-  <meta property="og:image" content="https://www.ciansdrumlessons.com/assets/cian-portrait.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
   <title>Drum Lessons in Cork | Cian O’Sullivan</title>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicSchool",
-    "name": "Cian's Drum Lessons",
-    "description": "Professional drum lessons in Douglas, Cork, taught by MA in Music Performance graduate.",
-    "image": "https://www.ciansdrumlessons.com/assets/cian-portrait.jpg",
-    "email": "mailto:cianos@gmail.com",
-    "telephone": "+353879228198",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Douglas",
-      "addressRegion": "Cork",
-      "addressCountry": "Ireland"
-    },
-    "url": "https://www.ciansdrumlessons.com"
-  }
-  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <style>
     html { scroll-behavior: smooth; }
-    .testimonial-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-    .dark-mode { background-color: #0f172a; color: #e2e8f0; }
+    body { background-color: #0f172a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+    .testimonial-card { transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: #1e293b; border: 1px solid #334155; }
+    .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+    
+    .logo-font { 
+      font-style: normal; 
+      font-weight: 600;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+    
+    .no-italic, i, em, blockquote, p, span, li { font-style: normal !important; }
   </style>
 </head>
 
-<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-inter">
+<body class="bg-slate-900 text-slate-200 no-italic">
 
-<header class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-sm">
-  <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-5">
-    <h1 class="text-lg font-semibold">Cian’s Drum Lessons</h1>
-    <nav class="space-x-6 hidden md:flex">
-      <a href="#testimonials" class="hover:text-amber-500">Testimonials</a>
-      <a href="#lessons" class="hover:text-amber-500">Lessons</a>
-      <a href="#contact" class="hover:text-amber-500">Contact</a>
-      <a href="#biography" class="hover:text-amber-500">Biography</a>
+<header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 shadow-sm">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-5">
+    <h1 class="text-2xl logo-font text-white">
+      Cian’s <span class="text-amber-500">Drum Lessons</span>
+    </h1>
+    <nav class="space-x-6 hidden md:flex font-medium">
+      <a href="#faqs" class="hover:text-amber-500 transition text-slate-300">FAQ's</a>
+      <a href="#testimonials" class="hover:text-amber-500 transition text-slate-300">Testimonials</a>
+      <a href="#contact" class="hover:text-amber-500 transition text-slate-300">Contact</a>
+      <a href="#biography" class="hover:text-amber-500 transition text-slate-300">Biography</a>
     </nav>
-    <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-700">
-      🌙
-    </button>
   </div>
 </header>
 
-<section class="h-screen flex flex-col justify-center items-center text-center bg-[url('https://www.ciansdrumlessons.com/assets/hero-bg.webp')] bg-cover bg-center" id="home">
-  <div class="bg-black/60 p-6 rounded-xl text-white max-w-xl mx-auto">
-    <h2 class="text-4xl font-bold mb-4">Learn Drums in Cork</h2>
-    <p class="text-lg mb-6">Professional drum lessons for beginners to advanced students, tailored to each learner.</p>
-    <a href="#contact" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg shadow-lg transition">Book Your First Lesson</a>
+<section class="h-screen flex flex-col justify-center items-center text-center bg-[url('https://www.ciansdrumlessons.com/assets/hero-bg.webp')] bg-cover bg-center relative" id="home">
+  <div class="absolute inset-0 bg-slate-950/70"></div>
+  <div class="relative z-10 px-8 rounded-2xl text-white max-w-2xl mx-auto border border-white/5 bg-slate-900/40 p-10 backdrop-blur-sm">
+    <h2 class="text-5xl font-extrabold mb-4 tracking-tight">Learn Drums in Cork</h2>
+    <p class="text-xl mb-8 font-light text-slate-300">Professional tuition for all ages, tailored to your musical goals.</p>
+    <a href="#contact" class="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full shadow-lg transition transform hover:scale-105 inline-block">Book Your First Lesson</a>
   </div>
 </section>
 
-<section id="testimonials" class="py-16 bg-slate-50 dark:bg-slate-800">
+<section id="faqs" class="py-24 bg-slate-900">
+  <div class="max-w-4xl mx-auto px-5">
+    <h2 class="text-3xl font-bold mb-12 text-center text-white">FAQ's</h2>
+    <ul class="text-lg leading-relaxed text-slate-300 space-y-6 list-none">
+      <li class="flex items-start gap-4">
+        <span class="text-amber-500 mt-1">●</span>
+        <span>I teach drums to students of <span class="text-amber-500">all ages</span>.</span>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="text-amber-500 mt-1">●</span>
+        <span>Typically seven years old would be the youngest age to start.</span>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="text-amber-500 mt-1">●</span>
+        <span>My approach to teaching younger students is to allow plenty of <span class="text-amber-500">freedom</span> and <span class="text-amber-500">exploration</span> and at key moments I will introduce a beat or song suggestion. In my experience this approach keeps the lessons interesting and enjoyable while still allowing for <span class="text-amber-500">challenges</span> to be presented.</span>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="text-amber-500 mt-1">●</span>
+        <span>I focus on <span class="text-amber-500">playing along with songs</span> and learning <span class="text-amber-500">drum beats</span> and <span class="text-amber-500">rudiments</span> (drummers' equivalent to musical scales).</span>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="text-amber-500 mt-1">●</span>
+        <span><span class="text-amber-500">Grade examinations</span> are available. This entails studying a trio of songs as well as specific drum beats, various exercises and reading music with an examination at the end of the academic year. Exams are done through the <a href="http://www.theacademyofpopularmusic.ie/" target="_blank" class="text-amber-500 hover:underline">Cork School of Music Academy of Popular Music</a> where I have taught for several years.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="testimonials" class="py-20 bg-slate-800/50">
   <div class="max-w-6xl mx-auto px-5 text-center">
-    <h2 class="text-3xl font-semibold mb-10">What Parents & Students Say</h2>
+    <h2 class="text-3xl font-bold mb-12 text-white">What Parents & Students Say</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up">
+      <div class="testimonial-card p-8 rounded-xl" data-aos="fade-up">
         <p>“Cian is a fantastic teacher. My son loves going to his drum lessons and is progressing really well.”</p>
-        <p class="mt-3 font-semibold text-amber-600">— Lyndsey</p>
+        <p class="mt-4 font-bold text-amber-500">— Lyndsey</p>
       </div>
-      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+      <div class="testimonial-card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
         <p>“Cian has been teaching my daughter for a year and she’s absolutely loving it. Highly recommended.”</p>
-        <p class="mt-3 font-semibold text-amber-600">— Emma</p>
+        <p class="mt-4 font-bold text-amber-500">— Emma</p>
       </div>
-      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up" data-aos-delay="200">
-        <p>“Cian has been teaching my son drummers for the last year and a half. He’s an excellent teacher.”</p>
-        <p class="mt-3 font-semibold text-amber-600">— Niamh</p>
+      <div class="testimonial-card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+        <p>“Cian has been teaching my son drums for the last year and a half. He’s an excellent teacher.”</p>
+        <p class="mt-4 font-bold text-amber-500">— Niamh</p>
       </div>
-      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up">
+      <div class="testimonial-card p-8 rounded-xl" data-aos="fade-up">
         <p>“Outstanding teacher and really nice guy. Our son has learned so much and enjoys every lesson.”</p>
-        <p class="mt-3 font-semibold text-amber-600">— Vaughn</p>
+        <p class="mt-4 font-bold text-amber-500">— Vaughn</p>
       </div>
-      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+      <div class="testimonial-card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
         <p>“Cian has been teaching our daughter drumming for the majority of primary school. She’s made great progress.”</p>
-        <p class="mt-3 font-semibold text-amber-600">— Jenny</p>
+        <p class="mt-4 font-bold text-amber-500">— Jenny</p>
       </div>
-      <div class="testimonial-card p-6 bg-white dark:bg-slate-700 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+      <div class="testimonial-card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
         <p>“Cian has been teaching our son drums for the last 18 months and we couldn’t be happier.”</p>
-        <p class="mt-3 font-semibold text-amber-600">— Eithne</p>
+        <p class="mt-4 font-bold text-amber-500">— Eithne</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="lessons" class="py-20">
-  <div class="max-w-5xl mx-auto px-5 text-center">
-    <h2 class="text-3xl font-semibold mb-8">About the Lessons</h2>
-    <p class="mb-6 text-lg">Cian O’Sullivan provides one-to-one drum tuition for students of all ages and experience levels. Lessons focus on developing confidence, rhythm, and creativity while keeping sessions engaging and fun.</p>
-    <p class="mb-6 text-lg">Students can learn by ear, through songs they enjoy, or work toward graded exams (RIAM, Trinity, Rockschool). Each session is tailored to the student’s goals and musical interests.</p>
-    <a href="#biography" class="inline-block mt-4 px-5 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Read Full Biography ↓</a>
+<section id="contact" class="py-24 bg-slate-900 text-center">
+  <div class="max-w-4xl mx-auto px-5">
+    <h2 class="text-3xl font-bold mb-8 text-white">Get in Touch</h2>
+    <div class="space-y-4">
+      <p class="text-xl font-medium">Email: <a href="mailto:cianos@gmail.com" class="text-amber-500 hover:underline">cianos@gmail.com</a></p>
+      <p class="text-xl font-medium">Phone: <a href="tel:+353879228198" class="text-amber-500 hover:underline">+353 87 922 8198</a></p>
+      <p class="text-lg pt-4"><a href="https://www.google.com/search?q=Douglas+Drum+Lessons" target="_blank" class="text-slate-400 hover:text-white underline">Find us on Google</a></p>
+    </div>
+    <p class="mt-12 text-sm text-slate-500">Douglas, Cork, Ireland</p>
   </div>
 </section>
 
-<section id="contact" class="py-20 bg-slate-50 dark:bg-slate-800">
-  <div class="max-w-4xl mx-auto px-5 text-center">
-    <h2 class="text-3xl font-semibold mb-8">Get in Touch</h2>
-    <p>Email: <a href="mailto:cianos@gmail.com" class="text-amber-600 hover:underline">cianos@gmail.com</a></p>
-    <p>Phone: <a href="tel:+353879228198" class="text-amber-600 hover:underline">+353 87 922 8198</a></p>
-    <p class="mt-4 text-sm text-slate-500">By contacting, you consent to your message being used solely to arrange lessons.</p>
-  </div>
-</section>
-
-<section id="biography" class="py-20">
+<section id="biography" class="py-24 bg-slate-800/50">
   <div class="max-w-5xl mx-auto px-5">
-    <h2 class="text-3xl font-semibold text-center mb-10">Full Biography</h2>
-    <div class="flex flex-col md:flex-row items-center gap-8">
-      <img src="https://www.ciansdrumlessons.com/assets/cian-portrait.jpg" alt="Cian O’Sullivan" class="rounded-2xl w-64 h-auto shadow-lg" loading="lazy" />
-      <div class="text-lg leading-relaxed">
-        <p>Cian O’Sullivan is a professional drummer and educator based in Douglas, Cork. He holds an MA in Music Performance and has over a decade of experience performing and teaching drums.</p>
-        <p>His performance highlights include working as a professional musician at Walt Disney World in Florida, as well as touring and recording with several Irish and international acts.</p>
-        <p>Cian has studied under renowned drummers such as Dave Elitch (Mars Volta), Mark Guiliana (David Bowie), and Ralph Peterson Jr. (Art Blakey). He brings this experience to his lessons, providing students with a modern, versatile, and inspiring approach to drumming.</p>
-        <p>Lessons are suitable for all ages and levels — from beginners taking their first steps, to experienced drummers preparing for professional or academic paths.</p>
+    <h2 class="text-3xl font-bold text-center mb-12 text-white">Full Biography</h2>
+    <div class="flex flex-col md:flex-row items-start gap-12">
+      <img src="cian.jpg" alt="Cian O’Sullivan" class="rounded-2xl w-64 h-auto shadow-2xl border border-slate-700" loading="lazy" />
+      <div class="text-lg leading-relaxed space-y-4 text-slate-300">
+        <p>From a very young age, Cian showed an aptitude for playing music on a range of instruments, eventually deciding to pursue drums professionally.</p>
+        <p>Beginning in 2004 and whilst still in school, he embarked on playing in various bands and musical theatre productions throughout Cork. This led to Cian’s extensive experience in playing for numerous shows and events at a high level nationwide.</p>
+        <p>In 2016, Cian was chosen to fill the much sought-after position as a member of the house band for a large-scale Irish music and dance production in Disney World, Orlando, Florida.</p>
+        <p>Upon returning to Cork in 2017, he first completed his undergraduate degree from the Cork School of Music and, in quick succession, subsequently earned a first-class honours MA in Music Performance in 2019.</p>
+        <p>In addition to his third-level studies, Cian has received masterclasses from Dave Weckl, Ash Soan and Rod Quinn. Cian has performed with Finbar Wright of the Irish Tenors, supported Vieux Farka Touré at the Cork Jazz Festival, and regularly plays with local rock bands and attends jam sessions locally and on occasion, throughout Europe. Cian has been a member of the Hank Wedel band since 2024.</p>
+        <p>Cian has been teaching since 2017, both privately and at music schools including The Cork School of Music. He is passionate about tailoring lessons to each student’s individual needs and goals.</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="py-10 text-center bg-slate-900 text-slate-300">
-  <p>&copy; 2025 Cian’s Drum Lessons. All rights reserved.</p>
-  <a href="#home" class="block mt-3 text-amber-500 hover:underline">Back to top ↑</a>
+<footer class="py-12 text-center bg-slate-950 text-slate-500 text-sm">
+  <p>&copy; 2026 Cian’s Drum Lessons. All rights reserved.</p>
+  <a href="#home" class="block mt-4 text-amber-500 hover:underline">Back to top ↑</a>
 </footer>
 
 <script>
-AOS.init();
-const toggle = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') document.documentElement.classList.add('dark');
-toggle.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark');
-  localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-});
+  AOS.init({
+    duration: 800,
+    once: true
+  });
 </script>
 
 </body>

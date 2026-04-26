@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide to buying a drum kit | Cian’s Drum Lessons</title>
+  
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    body { background-color: #0f172a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+    .content-card { background-color: #1e293b; border: 1px solid #334155; }
+    .logo-font { font-style: normal; font-weight: 600; }
+    
+    .zoom-cursor { cursor: zoom-in; transition: transform 0.2s; }
+    .zoom-cursor:hover { transform: scale(1.02); }
+    
+    #imageModal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 23, 42, 0.95);
+      cursor: zoom-out;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-900 text-slate-200">
+
+<div id="imageModal" onclick="this.style.display='none'" class="flex items-center justify-center p-4">
+  <img id="modalImg" class="max-w-full max-h-full rounded-lg shadow-2xl">
+</div>
+
+<header class="w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 shadow-sm">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-5 px-5">
+    <a href="index.html" class="hover:opacity-80 transition-opacity">
+      <h1 class="text-2xl logo-font text-white">
+        Cian’s <span class="text-amber-500">Drum Lessons</span>
+      </h1>
+    </a>
+    <a href="resources.html" class="text-slate-400 hover:text-white transition font-medium flex items-center gap-2 text-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      Back to Resources
+    </a>
+  </div>
+</header>
+
+<main class="py-16 px-5 max-w-3xl mx-auto min-h-screen">
+  <div class="mb-12" data-aos="fade-up">
+    <h1 class="text-2xl font-bold text-white inline-block border-b-2 border-amber-500 pb-2">Guide to buying a drum kit</h1>
+    <p class="mt-6 text-lg text-slate-400 italic">On average, students go to lessons for about 2-4 months before buying a drum kit.</p>
+  </div>
+
+  <section class="mb-12" data-aos="fade-up">
+    <h2 class="text-xl font-bold text-amber-500 mb-4">Acoustic or Electric?</h2>
+    <p class="leading-relaxed mb-4 text-slate-300">They are similar in price. If you have the space (and tolerance!) at home I would reccomend getting an acoustic kit. Acoustic drums are loud, but there are some tricks to dampen them. Electric kits are a useful alternative.</p>
+  </section>
+
+  <section class="content-card p-8 rounded-2xl mb-8" data-aos="fade-up">
+    <h2 class="text-2xl font-bold text-white mb-6">Acoustic</h2>
+    <div class="space-y-4 text-slate-300">
+      <p>Beginner acoustic kits are generally between €300-€700.</p>
+      <p><span class="text-amber-500 font-medium text-white">Second hand</span> is by far the best route if possible - places like <a href="https://www.donedeal.ie" target="_blank" class="text-amber-500 hover:underline">DoneDeal.ie</a> frequently see kits coming and going for great value. <a href="https://www.promusica.ie" target="_blank" class="text-amber-500 hover:underline">ProMusica.ie</a> in Cork City usually has some options. There are several music shops online offering competitive prices.</p>
+      <p>Beginner packages should include cymbals.</p>
+      <div class="pt-4 border-t border-slate-700">
+        <p class="text-sm uppercase tracking-wider text-slate-500 mb-2">Size</p>
+        <p>Look out for the bass drum size. For very young students I recommend 18” but bigger or smaller is fine too.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-card p-8 rounded-2xl mb-12" data-aos="fade-up">
+    <h2 class="text-2xl font-bold text-white mb-6">Electric</h2>
+    <div class="space-y-4 text-slate-300">
+      <p>Prices start at around €260. Sound quality and feel will go up with the price.</p>
+      <p>Shop on DoneDeal or online.</p>
+      
+      <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 mt-6">
+        <p class="text-white font-bold mb-4">The most important thing:</p>
+        <p class="mb-6">Buy a kit that has a <span class="text-amber-500 underline decoration-1">real pedal</span> for the bass drum. See photo. I would never buy anything else.</p>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-800">
+            <img src="pedalyes.jpg" alt="Bass drum pedal example 1" class="w-full h-auto object-cover zoom-cursor" onclick="openZoom(this.src)">
+          </div>
+          <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-800">
+            <img src="pedalno.jpg" alt="Bass drum pedal example 2" class="w-full h-auto object-cover zoom-cursor" onclick="openZoom(this.src)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="py-12 text-center bg-slate-950 text-slate-600 text-sm">
+  <p>&copy; 2026 Cian’s Drum Lessons. All rights reserved.</p>
+</footer>
+
+<script>
+  AOS.init({ duration: 800, once: true });
+
+  function openZoom(src) {
+    document.getElementById('modalImg').src = src;
+    document.getElementById('imageModal').style.display = 'flex';
+  }
+</script>
+
+</body>
+</html>

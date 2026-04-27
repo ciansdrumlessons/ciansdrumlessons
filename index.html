@@ -28,8 +28,14 @@
     .no-italic, i, em, blockquote, p, span, li { font-style: normal !important; }
     
     @media (max-width: 768px) {
-      /* Mobile transparency adjusted to 20% to matching the new desktop level */
-      .mobile-glass { background-color: rgba(15, 23, 42, 0.20) !important; }
+      /* MOBILE ADJUSTMENTS */
+      /* 1. Even higher transparency (now 15%) */
+      .mobile-glass { background-color: rgba(15, 23, 42, 0.15) !important; }
+      /* 2. Smaller box container with tighter padding */
+      .mobile-hero-tighten { padding: 1.5rem !important; max-width: 80% !important; }
+      /* 3. Smaller text sizes within the hero */
+      .mobile-hero-h2 { font-size: 1.5rem !important; line-height: 2rem !important; margin-bottom: 0.5rem !important; }
+      .mobile-hero-p { font-size: 0.9rem !important; line-height: 1.25rem !important; margin-bottom: 1rem !important; }
     }
   </style>
 </head>
@@ -47,7 +53,7 @@
       <a href="#faqs" class="hover:text-amber-500 transition text-slate-300">FAQ's</a>
       <a href="#testimonials" class="hover:text-amber-500 transition text-slate-300">Testimonials</a>
       <a href="#contact" class="hover:text-amber-500 transition text-slate-300">Contact</a>
-      <a href="#biography" class="hover:text-amber-500 transition text-slate-300">Biography</a>
+      <a href="#biography" class="hover:text-amber-500 transition text-slate-300">Bio</a>
       <a href="resources.html" class="hover:text-amber-500 transition text-slate-300">Resources</a>
       <a href="https://maps.app.goo.gl/ezKqq7B1z2QzQvDm7" target="_blank" rel="noopener" class="hover:opacity-80 transition-opacity shrink-0 ml-1">
         <img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google Business Profile" class="w-4 h-4 md:w-5 md:h-5">
@@ -60,9 +66,9 @@
   <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: url('hero-bg.jpg');"></div>
   <div class="absolute inset-0 bg-slate-950/45 z-1"></div>
   
-  <div class="relative z-10 px-6 py-8 md:p-10 rounded-2xl text-white max-w-[85%] md:max-w-2xl mx-auto border border-white/10 bg-slate-900/20 mobile-glass backdrop-blur-md shadow-2xl">
-    <h2 class="text-2xl md:text-4xl font-extrabold mb-3 tracking-tight drop-shadow-lg">Learn Drums in Cork</h2>
-    <p class="text-base md:text-xl mb-6 md:mb-8 font-light text-slate-100 drop-shadow-md">Professional tuition for all ages, tailored to your musical goals.</p>
+  <div class="relative z-10 px-6 py-8 md:p-10 rounded-2xl text-white max-w-[85%] md:max-w-2xl mx-auto border border-white/10 bg-slate-900/20 mobile-glass mobile-hero-tighten backdrop-blur-md shadow-2xl">
+    <h2 class="text-2xl md:text-4xl font-extrabold mb-3 tracking-tight drop-shadow-lg mobile-hero-h2">Learn Drums in Cork</h2>
+    <p class="text-base md:text-xl mb-6 md:mb-8 font-light text-slate-100 drop-shadow-md mobile-hero-p">Professional tuition for all ages, tailored to your musical goals.</p>
     <a href="#contact" class="px-6 py-3 md:px-8 md:py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full shadow-lg transition transform hover:scale-105 inline-block text-sm md:text-base">Book Your First Lesson</a>
   </div>
 </section>
@@ -93,7 +99,7 @@
       </li>
       <li class="flex items-start gap-4">
         <span class="text-amber-500 mt-1">●</span>
-        <span>I have been playing drums on and off since age 12, beginning to play in bands in my teens. In my 20s I acquired a <span class="text-amber-500">BA</span> and eventually and <span class="text-amber-500">MA</span> in music. During my MA, several teaching jobs were offered to me and I’ve been enjoying it since. I frequently play music locally and sometimes nationally. <a href="#biography" class="text-amber-500 hover:underline">>Biography</a></span>
+        <span>I have been playing drums on and off since age 12, beginning to play in bands in my teens. In my 20s I acquired a <span class="text-amber-500">BA</span> and eventually and <span class="text-amber-500">MA</span> in music. During my MA, several teaching jobs were offered to me and I’ve been enjoying it since. I frequently play music locally and sometimes nationally. <a href="#biography" class="text-amber-500 hover:underline">>Bio</a></span>
       </li>
       <li class="flex items-start gap-4">
         <span class="text-amber-500 mt-1">●</span>
@@ -151,7 +157,7 @@
 
 <section id="biography" class="py-24 bg-slate-800/50">
   <div class="max-w-5xl mx-auto px-5">
-    <h2 class="text-3xl font-bold text-center mb-12 text-white">Full Biography</h2>
+    <h2 class="text-3xl font-bold text-center mb-12 text-white">Bio</h2>
     <div class="flex flex-col md:flex-row items-start gap-12">
       <img src="cian.jpg" alt="Cian O’Sullivan" class="rounded-2xl w-64 h-auto shadow-2xl border border-slate-700" loading="lazy" />
       <div class="text-lg leading-relaxed space-y-4 text-slate-300">

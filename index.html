@@ -28,35 +28,37 @@
     .no-italic, i, em, blockquote, p, span, li { font-style: normal !important; }
     
     @media (max-width: 768px) {
-      /* 1. Ultra-transparent box (5% opacity) */
+      /* Ultra-transparent box (5% opacity) */
       .mobile-glass { background-color: rgba(15, 23, 42, 0.05) !important; border: 1px solid rgba(255,255,255,0.1); }
-      /* 2. Tightened hero box with minimal padding */
-      .mobile-hero-tighten { padding: 1rem !important; max-width: 90% !important; width: auto !important; }
-      /* 3. Larger mobile branding */
-      .mobile-logo-size { font-size: 1.5rem !important; }
-      /* 4. FAQ/Testimonial font size and edge-to-edge push */
-      .mobile-text-large { font-size: 1.15rem !important; line-height: 1.6 !important; }
-      .mobile-edge-push { padding-left: 1rem !important; padding-right: 1rem !important; }
+      /* Tightened hero box */
+      .mobile-hero-tighten { padding: 1rem !important; max-width: 95% !important; width: auto !important; }
+      /* BRANDING: One size bigger again */
+      .mobile-logo-size { font-size: 1.75rem !important; }
+      /* NAV: Larger font, tight gaps to keep on one line */
+      .mobile-nav-size { font-size: 14px !important; gap: 0.65rem !important; }
+      /* CONTENT: Larger text and wider push to edges */
+      .mobile-text-large { font-size: 1.25rem !important; line-height: 1.6 !important; }
+      .mobile-edge-push { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
     }
   </style>
 </head>
 
 <body class="bg-slate-900 text-slate-200 no-italic">
 
-<header class="fixed top-0 left-0 w-full z-50 bg-slate-900/70 backdrop-blur-md border-b border-white/10 shadow-sm">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center py-2 px-6 md:py-3 md:px-5">
+<header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/10 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center py-2 px-4 md:py-3 md:px-5">
     <a href="index.html" class="hover:opacity-80 transition-opacity">
       <h1 class="text-xl md:text-2xl logo-font text-white mb-1 md:mb-0 mobile-logo-size">
         Cian’s <span class="text-amber-500">Drum Lessons</span>
       </h1>
     </a>
-    <nav class="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 md:space-x-6 font-medium text-[12px] md:text-base">
+    <nav class="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 md:space-x-6 font-medium text-[12px] md:text-base mobile-nav-size">
       <a href="#faqs" class="hover:text-amber-500 transition text-slate-300">FAQ's</a>
       <a href="#testimonials" class="hover:text-amber-500 transition text-slate-300">Testimonials</a>
       <a href="#contact" class="hover:text-amber-500 transition text-slate-300">Contact</a>
       <a href="#biography" class="hover:text-amber-500 transition text-slate-300">Bio</a>
       <a href="resources.html" class="hover:text-amber-500 transition text-slate-300">Resources</a>
-      <a href="https://maps.app.goo.gl/ezKqq7B1z2QzQvDm7" target="_blank" rel="noopener" class="hover:opacity-80 transition-opacity shrink-0 ml-1">
+      <a href="https://maps.app.goo.gl/ezKqq7B1z2QzQvDm7" target="_blank" rel="noopener" class="hover:opacity-80 transition-opacity shrink-0">
         <img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google Business Profile" class="w-4 h-4 md:w-5 md:h-5">
       </a>
     </nav>
@@ -157,11 +159,11 @@
 </section>
 
 <section id="biography" class="py-24 bg-slate-800/50">
-  <div class="max-w-5xl mx-auto px-5">
+  <div class="max-w-5xl mx-auto px-5 mobile-edge-push">
     <h2 class="text-3xl font-bold text-center mb-12 text-white">Bio</h2>
     <div class="flex flex-col md:flex-row items-start gap-12">
-      <img src="cian.jpg" alt="Cian O’Sullivan" class="rounded-2xl w-64 h-auto shadow-2xl border border-slate-700" loading="lazy" />
-      <div class="text-lg leading-relaxed space-y-4 text-slate-300">
+      <img src="cian.jpg" alt="Cian O’Sullivan" class="rounded-2xl w-64 h-auto shadow-2xl border border-slate-700 mx-auto md:mx-0" loading="lazy" />
+      <div class="text-lg leading-relaxed space-y-4 text-slate-300 mobile-text-large">
         <p>From a very young age, Cian showed an aptitude for playing music on a range of instruments, eventually deciding to pursue drums professionally.</p>
         <p>Beginning in 2004 and whilst still in school, he embarked on playing in various bands and musical theatre productions throughout Cork. This led to Cian’s extensive experience in playing for numerous shows and events at a high level nationwide.</p>
         <p>In 2016, Cian was chosen to fill the much sought-after position as a member of the house band for a large-scale Irish music and dance production in Disney World, Orlando, Florida.</p>

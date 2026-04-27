@@ -26,13 +26,18 @@
     .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
     .logo-font { font-style: normal; font-weight: 600; letter-spacing: normal; text-transform: none; }
     .no-italic, i, em, blockquote, p, span, li { font-style: normal !important; }
+    
+    /* Custom utility for the extra-transparent mobile hero box */
+    @media (max-width: 768px) {
+      .mobile-glass { background-color: rgba(15, 23, 42, 0.25) !important; }
+    }
   </style>
 </head>
 
 <body class="bg-slate-900 text-slate-200 no-italic">
 
 <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/70 backdrop-blur-md border-b border-white/10 shadow-sm">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center py-2 px-4 md:py-3 md:px-5">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center py-2 px-6 md:py-3 md:px-5">
     <a href="index.html" class="hover:opacity-80 transition-opacity">
       <h1 class="text-xl md:text-2xl logo-font text-white mb-2 md:mb-0">
         Cian’s <span class="text-amber-500">Drum Lessons</span>
@@ -44,7 +49,7 @@
       <a href="#contact" class="hover:text-amber-500 transition text-slate-300">Contact</a>
       <a href="#biography" class="hover:text-amber-500 transition text-slate-300">Biography</a>
       <a href="resources.html" class="hover:text-amber-500 transition text-slate-300">Resources</a>
-      <a href="https://www.google.com/maps?cid=2450893051460395254" target="_blank" rel="noopener" class="hover:opacity-80 transition-opacity shrink-0">
+      <a href="https://www.google.com/maps/search/?api=1&query=Cian+O+Sullivan+Drum+Lessons+Cork" target="_blank" rel="noopener" class="hover:opacity-80 transition-opacity shrink-0">
         <img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google Business Profile" class="w-4 h-4 md:w-5 md:h-5">
       </a>
     </nav>
@@ -55,7 +60,7 @@
   <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: url('hero-bg.jpg');"></div>
   <div class="absolute inset-0 bg-slate-950/45 z-1"></div>
   
-  <div class="relative z-10 px-6 py-8 md:p-10 rounded-2xl text-white max-w-[90%] md:max-w-2xl mx-auto border border-white/10 bg-slate-900/70 backdrop-blur-md shadow-2xl">
+  <div class="relative z-10 px-6 py-8 md:p-10 rounded-2xl text-white max-w-[85%] md:max-w-2xl mx-auto border border-white/10 bg-slate-900/70 mobile-glass backdrop-blur-md shadow-2xl">
     <h2 class="text-2xl md:text-4xl font-extrabold mb-3 tracking-tight">Learn Drums in Cork</h2>
     <p class="text-base md:text-xl mb-6 md:mb-8 font-light text-slate-300">Professional tuition for all ages, tailored to your musical goals.</p>
     <a href="#contact" class="px-6 py-3 md:px-8 md:py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full shadow-lg transition transform hover:scale-105 inline-block text-sm md:text-base">Book Your First Lesson</a>
@@ -138,7 +143,7 @@
       <p class="text-xl font-medium">Phone: <a href="tel:+353879228198" class="text-amber-500 hover:underline">+353 87 922 8198</a></p>
       <p class="text-lg pt-4 flex items-center justify-center gap-2">
         <img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google Logo" class="w-5 h-5">
-        <a href="https://www.google.com/maps?cid=2450893051460395254" target="_blank" rel="noopener" class="text-slate-400 hover:text-white underline">Find us on Google</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Cian+O+Sullivan+Drum+Lessons+Cork" target="_blank" rel="noopener" class="text-slate-400 hover:text-white underline">Find us on Google</a>
       </p>
     </div>
   </div>
